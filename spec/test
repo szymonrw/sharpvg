@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for f in spec/*.gif; do
+  svgf="${f%.*}.svg"
+  lib/cli.js $f > $svgf
+done

@@ -1,0 +1,37 @@
+{
+  "name": "sharpvg",
+  "description": "Converts bitmaps to beautifully pixelated SVGs",
+  "keywords": [
+    "gif",
+    "pixelart",
+    "pixelated",
+    "sharp",
+    "svg"
+  ],
+  "version": "0.1.0",
+  "scripts": {
+    "test": "spec/test"
+  },
+  "author": "Szymon Witamborski <simon@brainshave.com>",
+  "license": "MIT",
+  "main": "./lib/index",
+  "bin": {
+    "sharpvg": "./lib/cli.js"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brainshave/sharpvg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brainshave/sharpvg/issues"
+  },
+  "dependencies": {
+    "ancient-oak": "^0.3.0",
+    "xml": "^0.0.12",
+    "omggif": "^1.0.5"
+  },
+  "devDependencies": {}
+}
