@@ -31,7 +31,7 @@ Usage (node, step by step):
     var data = fs.readFileSync("file.gif")
     // 2-dim array of 1s and 0s:
     var bitmap = sharpvg.gif(data)
-    // producing is a separate step so we can take the bitmap from
+    // producing svg is a separate step so we can take the bitmap from
     // different source
     var svg = sharpvg.svg(bitmap)
 
