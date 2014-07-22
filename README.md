@@ -21,4 +21,5 @@ Planned features:
 - PNG input
 - animated gif support
 
-LICENSE: MIT, see [COPYING](COPYING)
+LICENSE: Source code: MIT, see [COPYING](COPYING), icons (gif files in
+spec directory): only for testing purposes.
