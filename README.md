@@ -15,6 +15,26 @@ Features!
 - currently supports only one-colour GIFs as input (originally created for my own use)
 - fancy edge-tracing algorithm to maximally optimise output size
 
+Usage (CLI):
+
+    sharpvg file.gif > file.svg
+
+Usage (node, simple):
+
+    var sharpvg = require("sharpvg")
+    var svg = sharpvg(fs.readFileSync("file.gif"))
+
+Usage (node, step by step):
+
+    var sharpvg = require("sharpvg")
+    // raw file buffer:
+    var data = fs.readFileSync("file.gif")
+    // 2-dim array of 1s and 0s:
+    var bitmap = sharpvg.gif(data)
+    // producing is a separate step so we can take the bitmap from
+    // different source
+    var svg = sharpvg.svg(bitmap)
+
 Planned features:
 
 - colour support (both indexed and 24-bit)
