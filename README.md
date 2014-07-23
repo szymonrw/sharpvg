@@ -11,8 +11,9 @@ Why?
 
 Examples (from http://brainshave.com)
 
-<img src="examples/github.svg" width="48" height="45">
-<img src="examples/twitter.svg" width="48" height="45">
+<svg width="16" height="15" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M3,1h1v1h1v1h6v-1h1v-1h1v3h1v1h1v7h-1v1h-1v1h-10v-1h-1v-1h-1v-7h1v-1h1v-2M4,6v1h-1v5h1v1h2v-1h4v1h2v-1h1v-5h-1v-1h-3v1h-2v-1h-2M4,8h1v3h-1v-2M11,8h1v3h-1v-2M7,10h2v1h-2z" fill="black"></path></svg>
+
+<svg width="16" height="15" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M9,1h3v1h1v1h2v1h-1v1h-1v3h-1v3h-1v1h-1v1h-2v1h-5v-1h-1v-1h-1v-1h3v-1h-1v-2h-1v-2h-1v-4h4v1h1v1h1v1h1v-3h1M10,2h-1v5h-1v-1h-1v-1h-1v-1h-1v-1h-3v2h2v1h-1v1h2v1h-1v1h3v1h-2v1h-1v1h-1v1h5v-1h2v-1h1v-3h1v-3h1v-1h-1v-2h-1M10,3h1v2h-1v-1z" fill="black"></path></svg>
 
 Features!
 
