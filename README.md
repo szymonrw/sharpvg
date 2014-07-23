@@ -9,6 +9,11 @@ Why?
 - SVG is currently the only reliable way to scale up pixelated graphics with preserving sharpness of the pixels that works across browsers.
 - Converting to SVG might be useful in other scenarios, for example when we want to manipulate the image in real time.
 
+Examples (from http://brainshave.com)
+
+<img src="examples/github.svg" width="48" height="45">
+<img src="examples/twitter.svg" width="48" height="45">
+
 Features!
 
 - converts bitmaps to SVGs
