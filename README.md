@@ -35,6 +35,12 @@ Usage (node, step by step):
     // different source
     var svg = sharpvg.svg(bitmap)
 
+SharpVG uses [Ancient Oak][oak] (immutable data library) so all in and
+out data is immutable. To get a mutable version, you can use the
+`.dump()` method.
+
+[oak]: https://github.com/brainshave/ancient-oak
+
 Planned features:
 
 - colour support (both indexed and 24-bit)
