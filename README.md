@@ -35,7 +35,7 @@ Usage (node, step by step):
     // different source
     var svg = sharpvg.svg(bitmap)
 
-SharpVG also an experiment in me writing functional code so it uses
+SharpVG also an experiment in writing functional code so it uses
 [Ancient Oak][oak] and all in and out data is immutable (apart from
 file buffers). To get a mutable version, you can use the `.dump()`
 method.
