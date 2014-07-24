@@ -6,8 +6,10 @@ A library and command line utility to convert bitmaps to SVGs.
 
 Why?
 
-- SVG is currently the only reliable way to scale up pixelated graphics with preserving sharpness of the pixels that works across browsers.
+- SVG is currently the only static cross-browser way to scale up pixelated graphics with preserving sharpness of the pixels that [works across browsers][royko].
 - Converting to SVG might be useful in other scenarios, for example when we want to manipulate the image in real time.
+
+[royko]: http://vaughnroyko.com/state-of-nearest-neighbor-interpolation-in-canvas/
 
 Features!
 
