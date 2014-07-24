@@ -12,4 +12,4 @@ if (process.argv.length < 3) {
 
 var data = fs.readFileSync(process.argv[2]);
 
-console.log(convert(data));
+process.stdout.write(convert(data));

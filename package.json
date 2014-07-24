@@ -8,15 +8,14 @@
     "sharp",
     "svg"
   ],
-  "version": "0.2.0",
+  "version": "0.3.0",
   "scripts": {
     "test": "spec/test"
   },
   "author": "Szymon Witamborski <simon@brainshave.com>",
   "license": "MIT",
-  "main": "./lib/index",
   "bin": {
-    "sharpvg": "./lib/cli.js"
+    "sharpvg": "./cli.js"
   },
   "engines": {
     "node": ">= 0.8.0"

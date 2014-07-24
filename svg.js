@@ -5,9 +5,9 @@ module.exports = svg;
 var xml = require("xml");
 var I = require("ancient-oak");
 
-var orient = require("./orient");
-var trace = require("./trace");
-var optimize = require("./optimize");
+var orient = require("./lib/orient");
+var trace = require("./lib/trace");
+var optimize = require("./lib/optimize");
 
 function svg (pixmap) {
   var h = pixmap.size;
