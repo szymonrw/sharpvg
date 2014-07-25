@@ -15,7 +15,8 @@ function svg (image) {
   return xml({
     svg: [{
       _attr: {
-        viewBox: [ 1, 1, w - 1, h - 1].join(" "),
+        width: image.w,
+        height: image.h,
         xmlns: "http://www.w3.org/2000/svg",
         version: "1.1"
       }
@@ -45,7 +46,8 @@ function path (moves) {
             ? "h" + move.h
             : move.v
             ? "v" + move.v
-            : "M" + move.x + "," + move.y);
+            // accomodate for 1px margin we've introduced earlier
+            : "M" + (move.x - 1) + "," + (move.y - 1));
   }).reduce(function (str, move) {
     return str + move;
   }, "")+ "z";
