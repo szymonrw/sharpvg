@@ -13,8 +13,8 @@ Why?
 
 Features!
 
-- converts bitmaps to SVGs
-- currently supports only one-colour GIFs as input (originally created for my own use)
+- converts gifs to SVGs
+- colour! (one path for each colour)
 - fancy edge-tracing algorithm to maximally optimise output size
 
 Examples!
@@ -49,7 +49,6 @@ Usage (node, step by step):
 
 Planned features:
 
-- colour support (both indexed and 24-bit)
 - PNG input
 - animated gif support
 

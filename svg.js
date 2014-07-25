@@ -8,28 +8,35 @@ var orient = require("./lib/orient");
 var trace = require("./lib/trace");
 var optimize = require("./lib/optimize");
 
-function svg (pixmap) {
-  var h = pixmap.length + 2;
-  var w = pixmap[0].length + 2;
-
-  var data = path(optimize(trace(orient(pixmap), w, h)));
+function svg (image) {
+  var h = image.w + 2;
+  var w = image.h + 2;
 
   return xml({
     svg: [{
       _attr: {
-        viewBox: [ 1, 1, w - 2, h - 2].join(" "),
+        viewBox: [ 1, 1, w - 1, h - 1].join(" "),
         xmlns: "http://www.w3.org/2000/svg",
         version: "1.1"
       }
-    },{
-      path: [{
-        _attr: {
-          d: data,
-          fill: "black"
-        }
-      }]
-    }]
+    }].concat(paths(image.colors).map(function (p) {
+      return { path: [{ _attr: p }] };
+    }))
   });
+}
+
+function paths (colors) {
+  var out = [];
+
+  for (var color in colors) {
+    var img = colors[color];
+    out.push({
+      fill: color,
+      d: path(optimize(trace(orient(img))))
+    });
+  }
+
+  return out;
 }
 
 function path (moves) {
