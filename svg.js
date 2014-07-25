@@ -17,8 +17,7 @@ function svg (pixmap) {
   return xml({
     svg: [{
       _attr: {
-        width: w,
-        height: h,
+        viewBox: [ 1, 1, w - 2, h - 2].join(" "),
         xmlns: "http://www.w3.org/2000/svg",
         version: "1.1"
       }
