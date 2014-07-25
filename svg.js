@@ -3,15 +3,14 @@
 module.exports = svg;
 
 var xml = require("xml");
-var I = require("ancient-oak");
 
 var orient = require("./lib/orient");
 var trace = require("./lib/trace");
 var optimize = require("./lib/optimize");
 
 function svg (pixmap) {
-  var h = pixmap.size;
-  var w = pixmap(0).size;
+  var h = pixmap.length + 2;
+  var w = pixmap[0].length + 2;
 
   var data = path(optimize(trace(orient(pixmap), w, h)));
 
@@ -36,11 +35,11 @@ function svg (pixmap) {
 
 function path (moves) {
   return moves.map(function (move) {
-    return (move("h")
-            ? "h" + move("h")
-            : move("v")
-            ? "v" + move("v")
-            : "M" + move("x") + "," + move("y"));
+    return (move.h
+            ? "h" + move.h
+            : move.v
+            ? "v" + move.v
+            : "M" + move.x + "," + move.y);
   }).reduce(function (str, move) {
     return str + move;
   }, "")+ "z";

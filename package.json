@@ -28,7 +28,6 @@
     "url": "https://github.com/brainshave/sharpvg/issues"
   },
   "dependencies": {
-    "ancient-oak": "^0.3.0",
     "xml": "^0.0.12",
     "omggif": "^1.0.5"
   },

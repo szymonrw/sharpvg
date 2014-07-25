@@ -3,7 +3,6 @@
 module.exports = pixels;
 
 var GifReader = require("omggif").GifReader;
-var I = require("ancient-oak");
 
 function pixels (file_content) {
   var img = new GifReader(file_content);
@@ -22,5 +21,5 @@ function pixels (file_content) {
     }
   }
 
-  return I(pixmap);
+  return pixmap;
 }
