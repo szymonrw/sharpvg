@@ -48,7 +48,5 @@ function path (moves) {
             ? "v" + move.v
             // accomodate for 1px margin we've introduced earlier
             : "M" + (move.x - 1) + "," + (move.y - 1));
-  }).reduce(function (str, move) {
-    return str + move;
-  }, "")+ "z";
+  }).join("") + "z";
 }
