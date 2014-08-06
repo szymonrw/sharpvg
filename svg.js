@@ -21,7 +21,7 @@ function svg (image) {
         version: "1.1"
       }
     }].concat(paths(image.colors).map(function (p) {
-      return { path: [{ _attr: p }] };
+      return { path: { _attr: p } };
     }))
   });
 }
