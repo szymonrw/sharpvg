@@ -32,6 +32,11 @@ Usage (node, simple):
     var sharpvg = require("sharpvg")
     var svg = sharpvg(fs.readFileSync("file.gif"))
 
+Usage (browserified, so should work with AMD and as a global, gif decoding is not available):
+
+    var image = canvas.getContext("2d").getImageData(0, 0, 100, 100);
+    var svg = sharpvg(image.data, image.width, image.height);
+
 Usage (node, step by step):
 
     var gif = require("sharpvg/gif")
