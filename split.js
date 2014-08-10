@@ -7,11 +7,9 @@ module.exports = split;
 function split (data, w, h) {
   var colors = {};
 
-  var pixmap = new Array(h);
   var pos = 0;
 
   for (var y = 0; y < h; ++y) {
-    pixmap[y] = new Array(w);
     for (var x = 0; x < w; ++x) {
       pos = (y * w + x) * 4;
       if (data[pos + 3] > 0) {
