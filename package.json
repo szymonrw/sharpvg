@@ -10,7 +10,7 @@
   ],
   "version": "0.4.3",
   "scripts": {
-    "test": "spec/test"
+    "test": "scripts/test"
   },
   "author": "Szymon Witamborski <simon@brainshave.com>",
   "license": "MIT",
