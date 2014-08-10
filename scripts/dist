@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ -z "$npm_package_name" ]; then
+  echo "Needs to be run from npm run" >&2
+  exit 1
+fi
+
+DIST="dist"
+NAME="$DIST/$npm_package_name-$npm_package_version"
+
+INDEX="lib/web.js"
+STANDALONE="$NAME.js"
+MINIFIED="$NAME.min.js"
+MAP="$NAME.map.json"
+
+rm -r "$DIST"
+mkdir -p "$DIST"
+
+browserify "$INDEX" --standalone sharpvg -o "$STANDALONE"
+uglifyjs -m -c --source-map "$MAP" "$STANDALONE" > "$MINIFIED"

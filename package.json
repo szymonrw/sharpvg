@@ -8,8 +8,9 @@
     "sharp",
     "svg"
   ],
-  "version": "0.4.3",
+  "version": "0.4.4",
   "scripts": {
+    "dist": "scripts/dist",
     "test": "scripts/test"
   },
   "author": "Szymon Witamborski <simon@brainshave.com>",
@@ -30,5 +31,8 @@
   "dependencies": {
     "omggif": "^1.0.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "browserify": "^5.9.1",
+    "uglify-js": "^2.4.15"
+  }
 }
