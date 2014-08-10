@@ -2,8 +2,6 @@
 
 module.exports = svg;
 
-var xml = require("xml");
-
 var orient = require("./lib/orient");
 var trace = require("./lib/trace");
 var optimize = require("./lib/optimize");
@@ -12,18 +10,13 @@ function svg (image) {
   var h = image.w + 2;
   var w = image.h + 2;
 
-  return xml({
-    svg: [{
-      _attr: {
-        width: image.w,
-        height: image.h,
-        xmlns: "http://www.w3.org/2000/svg",
-        version: "1.1"
-      }
-    }].concat(paths(image.colors).map(function (p) {
-      return { path: { _attr: p } };
-    }))
-  });
+  return ["<svg ",
+          "width=\"", image.w, "\" ",
+          "height=\"", image.h, "\" ",
+          "xmlns=\"http://www.w3.org/2000/svg\">",
+         ].concat(paths(image.colors).map(function (p) {
+           return "<path d=\"" + p.d + "\" fill=\"" + p.fill + "\"/>";
+         })).concat(["</svg>"]).join("");
 }
 
 function paths (colors) {
