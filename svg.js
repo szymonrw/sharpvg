@@ -40,6 +40,6 @@ function path (moves) {
             : move.v
             ? "v" + move.v
             // accomodate for 1px margin we've introduced earlier
-            : "M" + (move.x - 1) + "," + (move.y - 1));
+            : "M" + (move.x - 1) + " " + (move.y - 1));
   }).join("") + "z";
 }
