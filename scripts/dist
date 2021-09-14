@@ -17,4 +17,4 @@ rm -r "$DIST"
 mkdir -p "$DIST"
 
 browserify "$INDEX" --standalone sharpvg -o "$STANDALONE"
-uglifyjs -m -c --source-map "$MAP" "$STANDALONE" > "$MINIFIED"
+uglifyjs -m -c --source-map "filename='$MAP'" "$STANDALONE" -o "$MINIFIED"
