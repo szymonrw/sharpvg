@@ -1,6 +1,20 @@
 #!/bin/bash
 
-for f in spec/*.gif; do
-  svgf="${f%.*}.svg"
-  ./cli.js $f > $svgf
+failed=no
+
+for input in spec/*.gif; do
+  fixture="${input%.*}-spec.svg"
+  output="${input%.*}-tmp.svg"
+
+  ./cli.js $input > $output
+
+  if ! diff -q $fixture $output; then
+    diff $fixture $output
+    echo # empty line
+    failed=yes
+  fi
 done
+
+if [ $failed = yes ]; then
+  exit 1;
+fi
